@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { getTranslation } from "@/lib/i18n";
 import { getLocalizedText } from "@/lib/utils";
+import { useTranslation } from "@/shared/hooks/useTranslation";
 import { Promotion } from "@/types";
 
 interface PromotionsProps {
@@ -11,8 +10,7 @@ interface PromotionsProps {
 }
 
 export default function Promotions({ promotions }: PromotionsProps) {
-  const { language } = useLanguage();
-  const t = (key: string) => getTranslation(language, key);
+  const { language } = useTranslation();
 
   return (
     <section

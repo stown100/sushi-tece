@@ -3,12 +3,15 @@ import { Language } from "@/types";
 export const translations = {
   ru: {
     header: {
-      address: "Адрес доставки",
+      address: "Адрес",
       phone: "Телефон",
       telegram: "Telegram бот",
       cart: "Корзина",
       mobileMenu: "Меню",
       language: "Язык",
+    },
+    hero: {
+      description: "Лучшие суши и роллы с доставкой",
     },
     nav: {
       menu: "Меню",
@@ -18,11 +21,26 @@ export const translations = {
     },
     categories: {
       all: "Все",
-      sushi: "Суши",
+      sets: "Сеты",
       rolls: "Роллы",
-      sets: "Наборы",
+      sushi: "Суши",
+      tempura: "Темпура",
+      ramen: "Рамен",
+      wok: "WOK",
       burgers: "Бургеры",
-      drinks: "Напитки",
+      mochi: "Моти",
+      "pasta-risotto": "Паста и ризотто",
+      "hot-dishes": "Горячие блюда",
+    },
+    subcategories: {
+      all: "Все",
+      philadelphia: "Филадельфия",
+      california: "Калифорния",
+      maki: "Маки",
+      "futo-maki": "Футо маки",
+      "baked-rolls": "Запечённые роллы",
+      nigiri: "Нигири",
+      "sushi-burger": "Суши бургер",
     },
     badges: {
       hit: "Хит сезона!",
@@ -48,6 +66,11 @@ export const translations = {
       addToCart: "В корзину",
       weight: "г",
       price: "₺",
+      notFound: "Товары не найдены",
+    },
+    emptyState: {
+      title: "Ничего не найдено",
+      description: "Попробуйте изменить фильтры или поисковый запрос",
     },
     search: {
       placeholder: "Искать блюда...",
@@ -75,7 +98,7 @@ export const translations = {
       vacancies: "Вакансии",
       contacts: "Контакты",
       social: "Социальные сети",
-      copyright: "© 2024 Sushi Tece. Все права защищены.",
+      copyright: "© 2024 SUSHI YM. Все права защищены.",
     },
     utensils: {
       chopsticks: "Палочки",
@@ -84,12 +107,15 @@ export const translations = {
   },
   uk: {
     header: {
-      address: "Адреса доставки",
+      address: "Адреса",
       phone: "Телефон",
       telegram: "Telegram бот",
       cart: "Кошик",
       mobileMenu: "Меню",
       language: "Мова",
+    },
+    hero: {
+      description: "Найкращі суші та роли з доставкою",
     },
     nav: {
       menu: "Меню",
@@ -99,11 +125,26 @@ export const translations = {
     },
     categories: {
       all: "Всі",
-      sushi: "Суші",
+      sets: "Сети",
       rolls: "Роли",
-      sets: "Набори",
+      sushi: "Суші",
+      tempura: "Темпура",
+      ramen: "Рамен",
+      wok: "WOK",
       burgers: "Бургери",
-      drinks: "Напої",
+      mochi: "Моті",
+      "pasta-risotto": "Паста і ризотто",
+      "hot-dishes": "Гарячі страви",
+    },
+    subcategories: {
+      all: "Всі",
+      philadelphia: "Філадельфія",
+      california: "Каліфорнія",
+      maki: "Макі",
+      "futo-maki": "Футо макі",
+      "baked-rolls": "Запічені роли",
+      nigiri: "Нігірі",
+      "sushi-burger": "Суші бургер",
     },
     badges: {
       hit: "Хіт сезону!",
@@ -129,6 +170,11 @@ export const translations = {
       addToCart: "В кошик",
       weight: "г",
       price: "₺",
+      notFound: "Товари не знайдені",
+    },
+    emptyState: {
+      title: "Нічого не знайдено",
+      description: "Спробуйте змінити фільтри або пошуковий запит",
     },
     search: {
       placeholder: "Шукати страви...",
@@ -163,12 +209,15 @@ export const translations = {
   },
   tr: {
     header: {
-      address: "Teslimat adresi",
+      address: "Adres",
       phone: "Telefon",
       telegram: "Telegram bot",
       cart: "Sepet",
       mobileMenu: "Menü",
       language: "Dil",
+    },
+    hero: {
+      description: "Teslimatlı en iyi suşi ve roll",
     },
     nav: {
       menu: "Menü",
@@ -178,11 +227,26 @@ export const translations = {
     },
     categories: {
       all: "Tümü",
-      sushi: "Suşi",
-      rolls: "Roll",
       sets: "Setler",
+      rolls: "Roll",
+      sushi: "Suşi",
+      tempura: "Tempura",
+      ramen: "Ramen",
+      wok: "WOK",
       burgers: "Burgerler",
-      drinks: "İçecekler",
+      mochi: "Mochi",
+      "pasta-risotto": "Makarna ve Risotto",
+      "hot-dishes": "Sıcak Yemekler",
+    },
+    subcategories: {
+      all: "Tümü",
+      philadelphia: "Philadelphia",
+      california: "California",
+      maki: "Maki",
+      "futo-maki": "Futo Maki",
+      "baked-rolls": "Fırınlanmış Roll",
+      nigiri: "Nigiri",
+      "sushi-burger": "Suşi Burger",
     },
     badges: {
       hit: "Sezon hiti!",
@@ -208,6 +272,11 @@ export const translations = {
       addToCart: "Sepete ekle",
       weight: "g",
       price: "₺",
+      notFound: "Ürün bulunamadı",
+    },
+    emptyState: {
+      title: "Hiçbir şey bulunamadı",
+      description: "Filtreleri veya arama sorgusunu değiştirmeyi deneyin",
     },
     search: {
       placeholder: "Yemek ara...",
@@ -235,7 +304,7 @@ export const translations = {
       vacancies: "İş ilanları",
       contacts: "İletişim",
       social: "Sosyal ağlar",
-      copyright: "© 2024 Sushi Tece. Tüm hakları saklıdır.",
+      copyright: "© 2024 SUSHI YM. Tüm hakları saklıdır.",
     },
     utensils: {
       chopsticks: "Çubuk",
@@ -244,10 +313,13 @@ export const translations = {
   },
   en: {
     header: {
-      address: "Delivery address",
+      address: "Address",
       phone: "Phone",
       telegram: "Telegram bot",
       cart: "Cart",
+    },
+    hero: {
+      description: "Best sushi and rolls with delivery",
     },
     nav: {
       menu: "Menu",
@@ -257,11 +329,26 @@ export const translations = {
     },
     categories: {
       all: "All",
-      sushi: "Sushi",
-      rolls: "Rolls",
       sets: "Sets",
+      rolls: "Rolls",
+      sushi: "Sushi",
+      tempura: "Tempura",
+      ramen: "Ramen",
+      wok: "WOK",
       burgers: "Burgers",
-      drinks: "Drinks",
+      mochi: "Mochi",
+      "pasta-risotto": "Pasta and Risotto",
+      "hot-dishes": "Hot Dishes",
+    },
+    subcategories: {
+      all: "All",
+      philadelphia: "Philadelphia",
+      california: "California",
+      maki: "Maki",
+      "futo-maki": "Futo Maki",
+      "baked-rolls": "Baked Rolls",
+      nigiri: "Nigiri",
+      "sushi-burger": "Sushi Burger",
     },
     badges: {
       hit: "Season hit!",
@@ -287,6 +374,11 @@ export const translations = {
       addToCart: "Add to cart",
       weight: "g",
       price: "₺",
+      notFound: "Products not found",
+    },
+    emptyState: {
+      title: "Nothing found",
+      description: "Try changing filters or search query",
     },
     search: {
       placeholder: "Search dishes...",
@@ -314,7 +406,7 @@ export const translations = {
       vacancies: "Vacancies",
       contacts: "Contacts",
       social: "Social networks",
-      copyright: "© 2024 Sushi Tece. All rights reserved.",
+      copyright: "© 2024 SUSHI YM. All rights reserved.",
     },
     utensils: {
       chopsticks: "Chopsticks",

@@ -1,16 +1,14 @@
 "use client";
 
 import React from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { getTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/shared/hooks/useTranslation";
 
 interface ConfirmationModalProps {
   onClose: () => void;
 }
 
 export default function ConfirmationModal({ onClose }: ConfirmationModalProps) {
-  const { language } = useLanguage();
-  const t = (key: string) => getTranslation(language, key);
+  const { t } = useTranslation();
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fadeIn">

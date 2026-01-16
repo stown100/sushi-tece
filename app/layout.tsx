@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CartProvider } from "@/contexts/CartContext";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Cart from "@/components/Cart";
+import Header from "@/widgets/header/ui/Header";
+import Footer from "@/widgets/footer/ui/Footer";
+import Cart from "@/widgets/cart/ui/Cart";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "Sushi Tece - Доставка суши и роллов",
+  title: "SUSHI YM - Доставка суши и роллов",
   description:
     "Лучшие суши, роллы, наборы, бургеры и напитки с доставкой. Заказывайте онлайн!",
   keywords: "суши, роллы, доставка, еда, японская кухня",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
-    title: "Sushi Tece - Доставка суши и роллов",
+    title: "SUSHI YM - Доставка суши и роллов",
     description: "Лучшие суши, роллы, наборы, бургеры и напитки с доставкой",
     type: "website",
   },

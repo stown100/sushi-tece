@@ -4,15 +4,16 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCart } from "@/contexts/CartContext";
-import { getTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/shared/hooks/useTranslation";
+import TelegramIcon from "./TelegramIcon";
+import InstagramIcon from "./InstagramIcon";
 
 export default function Header() {
   const { language, setLanguage } = useLanguage();
   const { getTotalItems, openCart } = useCart();
+  const { t } = useTranslation();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
-
-  const t = (key: string) => getTranslation(language, key);
   const totalItems = getTotalItems();
 
   const languages = [
@@ -32,35 +33,30 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-primary-600">
-              🍣 Sushi Tece
+              🍣 SUSHI YM
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link
-              href="/"
+            <a
+              href="#menu"
               className="text-gray-700 hover:text-primary-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const menuSection = document.getElementById("menu");
+                if (menuSection) {
+                  menuSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               {t("nav.menu")}
-            </Link>
+            </a>
             <Link
               href="#promotions"
               className="text-gray-700 hover:text-primary-600 transition-colors"
             >
               {t("nav.promotions")}
-            </Link>
-            <Link
-              href="#about"
-              className="text-gray-700 hover:text-primary-600 transition-colors"
-            >
-              {t("nav.about")}
-            </Link>
-            <Link
-              href="#contacts"
-              className="text-gray-700 hover:text-primary-600 transition-colors"
-            >
-              {t("nav.contacts")}
             </Link>
           </nav>
 
@@ -108,27 +104,44 @@ export default function Header() {
             </div>
 
             {/* Contact Info */}
-            <div className="hidden lg:flex flex-col text-sm">
-              <div className="text-gray-600">
-                <span className="font-semibold">{t("header.phone")}:</span> +7
-                (800) 333-33-23
+            <div className="hidden lg:flex flex-col text-xs">
+              <div className="text-gray-600 text-xs">
+                <span className="font-semibold">{t("header.phone")}: </span>
+                <span className="text-[10px] leading-tight">
+                  +90 50 101010 89
+                </span>
               </div>
-              <div className="text-gray-600">
-                <span className="font-semibold">{t("header.address")}:</span>{" "}
-                Москва, ул. Примерная, д. 1
+              <div className="text-gray-600 text-xs">
+                <span className="font-semibold">{t("header.address")}: </span>
+                <span className="text-[10px] leading-tight">
+                  DENIZ MAH. 49257
+                  <br />
+                  SK. NO:9B/TIC4 MEZITLI MERSIN TURKIYE
+                </span>
               </div>
             </div>
 
-            {/* Telegram Link */}
-            <a
-              href="https://t.me/sushitece_bot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:flex items-center space-x-1 text-blue-500 hover:text-blue-600 transition-colors"
-            >
-              <span className="text-xl">📱</span>
-              <span className="text-sm">{t("header.telegram")}</span>
-            </a>
+            {/* Social Links */}
+            <div className="hidden md:flex items-center space-x-2">
+              {/* Telegram Link */}
+              <a
+                href="https://t.me/sushitece_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
+                <TelegramIcon size="md" />
+              </a>
+              {/* Instagram Link */}
+              <a
+                href="https://www.instagram.com/sushi_ym_mersin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <InstagramIcon size="md" />
+              </a>
+            </div>
 
             {/* Cart Button */}
             <button
@@ -187,33 +200,26 @@ export default function Header() {
 
             {/* Navigation */}
             <nav className="flex-1 overflow-y-auto p-4 space-y-2">
-              <Link
-                href="/"
-                onClick={() => setShowMobileMenu(false)}
+              <a
+                href="#menu"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowMobileMenu(false);
+                  const menuSection = document.getElementById("menu");
+                  if (menuSection) {
+                    menuSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="block text-gray-700 hover:text-primary-600 py-2 transition-colors"
               >
                 {t("nav.menu")}
-              </Link>
+              </a>
               <Link
                 href="#promotions"
                 onClick={() => setShowMobileMenu(false)}
                 className="block text-gray-700 hover:text-primary-600 py-2 transition-colors"
               >
                 {t("nav.promotions")}
-              </Link>
-              <Link
-                href="#about"
-                onClick={() => setShowMobileMenu(false)}
-                className="block text-gray-700 hover:text-primary-600 py-2 transition-colors"
-              >
-                {t("nav.about")}
-              </Link>
-              <Link
-                href="#contacts"
-                onClick={() => setShowMobileMenu(false)}
-                className="block text-gray-700 hover:text-primary-600 py-2 transition-colors"
-              >
-                {t("nav.contacts")}
               </Link>
 
               {/* Language Selector */}

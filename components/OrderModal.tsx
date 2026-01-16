@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { getTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/shared/hooks/useTranslation";
 import { CustomerInfo } from "@/types";
 
 interface OrderModalProps {
@@ -11,8 +10,7 @@ interface OrderModalProps {
 }
 
 export default function OrderModal({ onClose, onSubmit }: OrderModalProps) {
-  const { language } = useLanguage();
-  const t = (key: string) => getTranslation(language, key);
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState<CustomerInfo>({
     name: "",

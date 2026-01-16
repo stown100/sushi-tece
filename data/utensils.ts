@@ -15,7 +15,7 @@ export const utensilsProducts: Product[] = [
       tr: "Tek kullanımlık suşi çubukları",
       en: "Disposable sushi chopsticks",
     },
-    category: "drinks", // Используем drinks как категорию для приборов
+    category: "utensils",
     price: 0, // Бесплатно
     weight: 10,
     image: "/images/chopsticks.jpg",
@@ -35,7 +35,7 @@ export const utensilsProducts: Product[] = [
       tr: "Tek kullanımlık çatal",
       en: "Disposable fork",
     },
-    category: "drinks",
+    category: "utensils",
     price: 0,
     weight: 5,
     image: "/images/fork.jpg",

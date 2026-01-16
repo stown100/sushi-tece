@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import TelegramIcon from "@/shared/ui/TelegramIcon";
 import InstagramIcon from "@/shared/ui/InstagramIcon";

@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import { useCart } from "@/contexts/CartContext";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { getTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/shared/hooks/useTranslation";
 import { Product } from "@/types";
 
 interface ProductButtonProps {
@@ -12,8 +11,7 @@ interface ProductButtonProps {
 
 export default function ProductButton({ product }: ProductButtonProps) {
   const { addToCart, items } = useCart();
-  const { language } = useLanguage();
-  const t = (key: string) => getTranslation(language, key);
+  const { t } = useTranslation();
   const [isAnimating, setIsAnimating] = useState(false);
 
   const cartItem = items.find((item) => item.id === product.id);

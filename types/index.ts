@@ -1,4 +1,24 @@
-export type Category = "sushi" | "rolls" | "sets" | "burgers" | "drinks";
+export type Category =
+  | "sets"
+  | "rolls"
+  | "sushi"
+  | "tempura"
+  | "ramen"
+  | "wok"
+  | "burgers"
+  | "mochi"
+  | "pasta-risotto"
+  | "hot-dishes"
+  | "utensils";
+
+export type RollSubcategory =
+  | "philadelphia"
+  | "california"
+  | "maki"
+  | "futo-maki"
+  | "baked-rolls";
+
+export type SushiSubcategory = "nigiri" | "sushi-burger";
 
 export type BadgeType = "hit" | "new" | "spicy" | "vegetarian" | "discount";
 
@@ -17,6 +37,7 @@ export interface Product {
     en: string;
   };
   category: Category;
+  subcategory?: RollSubcategory | SushiSubcategory;
   price: number;
   weight: number; // в граммах
   image: string;
