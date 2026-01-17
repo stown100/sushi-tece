@@ -26,9 +26,8 @@ export default function ProductButton({ product }: ProductButtonProps) {
   return (
     <button
       onClick={handleAddToCart}
-      className={`w-full btn-primary relative overflow-hidden ${
-        isAnimating ? "animate-pulse" : ""
-      } ${isInCart ? "bg-green-600 hover:bg-green-700" : ""}`}
+      className={`w-full btn-primary relative overflow-hidden ${isAnimating ? "animate-pulse" : ""
+        } ${isInCart ? "bg-green-600 hover:bg-green-700" : ""}`}
     >
       {isInCart ? (
         <span className="flex items-center justify-center gap-2">

@@ -34,9 +34,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
-        }`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}

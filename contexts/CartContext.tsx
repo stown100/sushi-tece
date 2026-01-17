@@ -7,7 +7,7 @@ import React, {
   useEffect,
   useCallback,
 } from "react";
-import { Product, CartItem, Category } from "@/types";
+import { Product, CartItem } from "@/types";
 import { products } from "@/data/products";
 import { utensilsProducts } from "@/data/utensils";
 

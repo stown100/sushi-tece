@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCart } from "@/contexts/CartContext";
 import { useTranslation } from "@/shared/hooks/useTranslation";
-import TelegramIcon from "./TelegramIcon";
-import InstagramIcon from "./InstagramIcon";
+import TelegramIcon from "@/shared/ui/TelegramIcon";
+import InstagramIcon from "@/shared/ui/InstagramIcon";
 
 export default function Header() {
   const { language, setLanguage } = useLanguage();
@@ -89,11 +89,10 @@ export default function Header() {
                           setLanguage(lang.code);
                           setShowLanguageMenu(false);
                         }}
-                        className={`w-full text-left px-3 py-2 text-xs hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg transition-colors ${
-                          language === lang.code
+                        className={`w-full text-left px-3 py-2 text-xs hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg transition-colors ${language === lang.code
                             ? "bg-primary-50 text-primary-600 font-semibold"
                             : "text-gray-700"
-                        }`}
+                          }`}
                       >
                         {lang.label}
                       </button>
@@ -180,11 +179,10 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
-            showMobileMenu
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${showMobileMenu
               ? "translate-x-0"
               : "translate-x-full pointer-events-none"
-          }`}
+            }`}
         >
           <div className="flex flex-col h-full">
             {/* Header */}
@@ -234,11 +232,10 @@ export default function Header() {
                       onClick={() => {
                         setLanguage(lang.code);
                       }}
-                      className={`w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 transition-colors ${
-                        language === lang.code
+                      className={`w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 transition-colors ${language === lang.code
                           ? "bg-primary-50 text-primary-600 font-semibold"
                           : "text-gray-700"
-                      }`}
+                        }`}
                     >
                       {lang.label}
                     </button>

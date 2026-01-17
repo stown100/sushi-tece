@@ -4,7 +4,7 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getLocalizedText } from "@/lib/utils";
 import { Product, Category } from "@/types";
-import ProductCard from "./ProductCard";
+import ProductCard from "@/shared/ui/ProductCard";
 
 interface MenuGridProps {
   products: Product[];

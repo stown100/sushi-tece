@@ -5,7 +5,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import OrderModal from "./OrderModal";
 import ConfirmationModal from "./ConfirmationModal";
-import CartItem from "./CartItem";
+import CartItem from "@/shared/ui/CartItem";
 
 export default function Cart() {
   const { items, isOpen, closeCart, clearCart, getTotalPrice } = useCart();
@@ -47,9 +47,8 @@ export default function Cart() {
 
       {/* Cart Sidebar */}
       <div
-        className={`fixed right-0 top-0 h-full w-full md:w-96 bg-white shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
-        }`}
+        className={`fixed right-0 top-0 h-full w-full md:w-96 bg-white shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
+          }`}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-3 border-b">

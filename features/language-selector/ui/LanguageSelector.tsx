@@ -35,11 +35,10 @@ export default function LanguageSelector({
             <button
               key={lang.code}
               onClick={() => setLanguage(lang.code)}
-              className={`w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 transition-colors ${
-                language === lang.code
-                  ? "bg-primary-50 text-primary-600 font-semibold"
-                  : "text-gray-700"
-              }`}
+              className={`w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100 transition-colors ${language === lang.code
+                ? "bg-primary-50 text-primary-600 font-semibold"
+                : "text-gray-700"
+                }`}
             >
               {lang.label}
             </button>
@@ -74,11 +73,10 @@ export default function LanguageSelector({
                   setLanguage(lang.code);
                   setShowMenu(false);
                 }}
-                className={`w-full text-left px-3 py-2 text-xs hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg transition-colors ${
-                  language === lang.code
-                    ? "bg-primary-50 text-primary-600 font-semibold"
-                    : "text-gray-700"
-                }`}
+                className={`w-full text-left px-3 py-2 text-xs hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg transition-colors ${language === lang.code
+                  ? "bg-primary-50 text-primary-600 font-semibold"
+                  : "text-gray-700"
+                  }`}
               >
                 {lang.label}
               </button>

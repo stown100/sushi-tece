@@ -19,7 +19,7 @@ export default function SubcategoryFilter({
   selectedSubcategory,
   onSubcategoryChange,
 }: SubcategoryFilterProps) {
-  if (!subcategories) return null;
+  if (!subcategories || subcategories.length === 0) return null;
 
   return (
     <div className="flex flex-wrap justify-center gap-2 mb-4">
