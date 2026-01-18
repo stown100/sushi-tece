@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { getLocalizedText } from "@/lib/utils";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import { Product } from "@/types";
@@ -42,14 +43,18 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="card group">
       {/* Image */}
       <div className="relative h-40 bg-gray-200 overflow-hidden">
-        <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-5xl">
-          🍣
-        </div>
+        <Image
+          src={product.image}
+          alt={productName}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+        />
 
         {/* Badge */}
         {product.badge && (
           <div
-            className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-semibold ${getBadgeColor(
+            className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-semibold z-10 ${getBadgeColor(
               product.badge
             )}`}
           >

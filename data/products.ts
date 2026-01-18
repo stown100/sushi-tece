@@ -19,7 +19,7 @@ export const products: Product[] = [
     category: "sets",
     price: 3000,
     weight: 2000,
-    image: "/images/set-mega.jpg",
+    image: "/menu/IMG_9828.jpg",
     utensils: "chopsticks",
   },
   {
@@ -39,7 +39,7 @@ export const products: Product[] = [
     category: "sets",
     price: 2500,
     weight: 1800,
-    image: "/images/set-gourmet.jpg",
+    image: "/menu/IMG_9824.jpg",
     utensils: "chopsticks",
   },
   {
@@ -59,7 +59,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1000,
     weight: 1200,
-    image: "/images/set-color-boom.jpg",
+    image: "/menu/IMG_9823.jpg",
     badge: "new",
     utensils: "chopsticks",
   },
@@ -80,7 +80,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1500,
     weight: 1400,
-    image: "/images/set-art.jpg",
+    image: "/menu/IMG_9827.jpg",
     utensils: "chopsticks",
   },
   {
@@ -100,7 +100,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1350,
     weight: 1300,
-    image: "/images/set-warm-mix.jpg",
+    image: "/menu/IMG_9826.jpg",
     utensils: "chopsticks",
   },
   {
@@ -120,7 +120,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1200,
     weight: 1100,
-    image: "/images/set-top-hit.jpg",
+    image: "/menu/IMG_9825.jpg",
     badge: "hit",
     utensils: "chopsticks",
   },
@@ -141,7 +141,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1800,
     weight: 1600,
-    image: "/images/set-taste-mix.jpg",
+    image: "/menu/IMG_9828.jpg", //TODO: change image
     utensils: "chopsticks",
   },
   {
@@ -161,7 +161,7 @@ export const products: Product[] = [
     category: "sets",
     price: 3500,
     weight: 2500,
-    image: "/images/set-boom.jpg",
+    image: "/menu/IMG_9822.jpg",
     badge: "hit",
     utensils: "chopsticks",
   },
@@ -185,7 +185,7 @@ export const products: Product[] = [
     subcategory: "sushi-burger",
     price: 270,
     weight: 200,
-    image: "/images/sushi-burger-fish-mix.jpg",
+    image: "/menu/IMG_9820.jpg",
     utensils: "chopsticks",
   },
   {
@@ -206,7 +206,7 @@ export const products: Product[] = [
     subcategory: "sushi-burger",
     price: 270,
     weight: 200,
-    image: "/images/sushi-burger-shrimp.jpg",
+    image: "/menu/IMG_9819.jpg",
     utensils: "chopsticks",
   },
 
@@ -229,7 +229,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/images/philadelphia-mango.jpg",
+    image: "/menu/IMG_9817.JPG", //TODO: попросить фото
     utensils: "chopsticks",
   },
   {
@@ -250,7 +250,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/images/philadelphia-fresh-salmon.jpg",
+    image: "/menu/IMG_9819.JPG", //TODO: попросить фото
     badge: "hit",
     utensils: "chopsticks",
   },
@@ -272,7 +272,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/images/philadelphia-roe.jpg",
+    image: "/menu/IMG_9820.JPG", //TODO: попросить фото
     utensils: "chopsticks",
   },
   {
@@ -293,7 +293,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/images/philadelphia-tuna.jpg",
+    image: "/menu/IMG_9832.JPG",
     utensils: "chopsticks",
   },
   {
@@ -314,7 +314,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/images/philadelphia-shrimp-tempura.jpg",
+    image: "/menu/IMG_9833.JPG",
     utensils: "chopsticks",
   },
 
@@ -337,7 +337,7 @@ export const products: Product[] = [
     subcategory: "california",
     price: 320,
     weight: 230,
-    image: "/images/california-salmon.jpg",
+    image: "/menu/IMG_9834.JPG",
     utensils: "chopsticks",
   },
   {
@@ -358,7 +358,7 @@ export const products: Product[] = [
     subcategory: "california",
     price: 320,
     weight: 230,
-    image: "/images/california-boiled-shrimp.jpg",
+    image: "/menu/IMG_9835.JPG",
     utensils: "chopsticks",
   },
 
@@ -381,7 +381,7 @@ export const products: Product[] = [
     subcategory: "maki",
     price: 150,
     weight: 120,
-    image: "/images/maki-salmon.jpg",
+    image: "/menu/IMG_9861.JPG",
     utensils: "chopsticks",
   },
   {
@@ -402,7 +402,7 @@ export const products: Product[] = [
     subcategory: "maki",
     price: 150,
     weight: 120,
-    image: "/images/maki-shrimp.jpg",
+    image: "/menu/IMG_9862.JPG",
     utensils: "chopsticks",
   },
 
@@ -425,7 +425,7 @@ export const products: Product[] = [
     subcategory: "futo-maki",
     price: 250,
     weight: 200,
-    image: "/images/futo-maki-crab.jpg",
+    image: "/menu/IMG_9848.JPG",
     utensils: "chopsticks",
   },
   {
@@ -446,7 +446,7 @@ export const products: Product[] = [
     subcategory: "futo-maki",
     price: 250,
     weight: 200,
-    image: "/images/futo-maki-shrimp.jpg",
+    image: "/menu/IMG_9849.JPG", //TODO: change image
     utensils: "chopsticks",
   },
 
@@ -469,7 +469,7 @@ export const products: Product[] = [
     subcategory: "nigiri",
     price: 90,
     weight: 45,
-    image: "/images/nigiri-tuna.jpg",
+    image: "/menu/IMG_9850.jpg",
     utensils: "chopsticks",
   },
   {
@@ -490,7 +490,7 @@ export const products: Product[] = [
     subcategory: "nigiri",
     price: 90,
     weight: 45,
-    image: "/images/nigiri-salmon.jpg",
+    image: "/menu/IMG_9851.jpg",
     utensils: "chopsticks",
   },
 
@@ -513,7 +513,7 @@ export const products: Product[] = [
     subcategory: "baked-rolls",
     price: 300,
     weight: 250,
-    image: "/images/baked-roll-salmon.jpg",
+    image: "/menu/IMG_9854.jpg",
     utensils: "chopsticks",
   },
   {
@@ -534,7 +534,7 @@ export const products: Product[] = [
     subcategory: "baked-rolls",
     price: 300,
     weight: 250,
-    image: "/images/baked-roll-fresh-salmon.jpg",
+    image: "/menu/IMG_9855.jpg",
     utensils: "chopsticks",
   },
   {
@@ -555,7 +555,7 @@ export const products: Product[] = [
     subcategory: "baked-rolls",
     price: 300,
     weight: 250,
-    image: "/images/baked-roll-shrimp.jpg",
+    image: "/menu/IMG_9856.jpg",
     utensils: "chopsticks",
   },
 
@@ -577,7 +577,7 @@ export const products: Product[] = [
     category: "tempura",
     price: 390,
     weight: 280,
-    image: "/images/tempura-crab.jpg",
+    image: "/menu/IMG_9852.jpg",
     utensils: "chopsticks",
   },
   {
@@ -597,7 +597,7 @@ export const products: Product[] = [
     category: "tempura",
     price: 390,
     weight: 280,
-    image: "/images/tempura-salmon.jpg",
+    image: "/menu/IMG_9853.jpg",
     utensils: "chopsticks",
   },
   {
@@ -617,7 +617,7 @@ export const products: Product[] = [
     category: "tempura",
     price: 300,
     weight: 260,
-    image: "/images/tempura-tom-yum.jpg",
+    image: "/menu/IMG_9848.jpg",
     badge: "spicy",
     utensils: "chopsticks",
   },
@@ -640,7 +640,7 @@ export const products: Product[] = [
     category: "ramen",
     price: 500,
     weight: 600,
-    image: "/images/ramen-beef.jpg",
+    image: "/menu/IMG_9808.jpg",
     utensils: "chopsticks",
   },
   {
@@ -660,7 +660,7 @@ export const products: Product[] = [
     category: "ramen",
     price: 500,
     weight: 600,
-    image: "/images/ramen-shrimp.jpg",
+    image: "/menu/IMG_9807.jpg",
     utensils: "chopsticks",
   },
   {
@@ -680,7 +680,7 @@ export const products: Product[] = [
     category: "ramen",
     price: 500,
     weight: 600,
-    image: "/images/ramen-chicken.jpg",
+    image: "/menu/IMG_9809.jpg",
     utensils: "chopsticks",
   },
 
@@ -702,7 +702,7 @@ export const products: Product[] = [
     category: "wok",
     price: 420,
     weight: 500,
-    image: "/images/wok-chicken-vegetables.jpg",
+    image: "/menu/IMG_9858.jpg",
     utensils: "chopsticks",
   },
   {
@@ -722,7 +722,7 @@ export const products: Product[] = [
     category: "wok",
     price: 420,
     weight: 500,
-    image: "/images/wok-shrimp-vegetables.jpg",
+    image: "/menu/IMG_9859.jpg",
     utensils: "chopsticks",
   },
   {
@@ -742,7 +742,7 @@ export const products: Product[] = [
     category: "wok",
     price: 420,
     weight: 500,
-    image: "/images/wok-beef-vegetables.jpg",
+    image: "/menu/IMG_9860.jpg",
     utensils: "chopsticks",
   },
 
@@ -764,7 +764,7 @@ export const products: Product[] = [
     category: "burgers",
     price: 350,
     weight: 280,
-    image: "/images/burger-ym.jpg",
+    image: "/menu/IMG_9935.jpg",
     utensils: "fork",
   },
   {
@@ -784,7 +784,7 @@ export const products: Product[] = [
     category: "burgers",
     price: 350,
     weight: 300,
-    image: "/images/burger-cheese-ym.jpg",
+    image: "/menu/IMG_9934.jpg",
     utensils: "fork",
   },
 
@@ -806,7 +806,7 @@ export const products: Product[] = [
     category: "mochi",
     price: 150,
     weight: 80,
-    image: "/images/mochi-pistachio-raspberry.jpg",
+    image: "/menu/IMG_9810.jpg",
     utensils: "none",
   },
   {
@@ -826,7 +826,7 @@ export const products: Product[] = [
     category: "mochi",
     price: 150,
     weight: 80,
-    image: "/images/mochi-mango-passion.jpg",
+    image: "/menu/IMG_9812.jpg",
     utensils: "none",
   },
   {
@@ -846,7 +846,7 @@ export const products: Product[] = [
     category: "mochi",
     price: 150,
     weight: 80,
-    image: "/images/mochi-strawberry.jpg",
+    image: "/menu/IMG_9813.jpg",
     utensils: "none",
   },
   {
@@ -866,7 +866,7 @@ export const products: Product[] = [
     category: "mochi",
     price: 150,
     weight: 80,
-    image: "/images/mochi-hazelnut.jpg",
+    image: "/menu/IMG_9811.jpg",
     utensils: "none",
   },
 
@@ -888,7 +888,7 @@ export const products: Product[] = [
     category: "pasta-risotto",
     price: 480,
     weight: 450,
-    image: "/images/fettuccine-salmon.jpg",
+    image: "/menu/IMG_9829.jpg",
     utensils: "fork",
   },
   {
@@ -908,7 +908,7 @@ export const products: Product[] = [
     category: "pasta-risotto",
     price: 450,
     weight: 430,
-    image: "/images/fettuccine-chicken-mushrooms.jpg",
+    image: "/menu/IMG_9817.jpg",
     utensils: "fork",
   },
   {
@@ -928,7 +928,7 @@ export const products: Product[] = [
     category: "pasta-risotto",
     price: 480,
     weight: 450,
-    image: "/images/pasta-seafood.jpg",
+    image: "/menu/IMG_9070.jpg",
     utensils: "fork",
   },
   {
@@ -948,7 +948,7 @@ export const products: Product[] = [
     category: "pasta-risotto",
     price: 480,
     weight: 450,
-    image: "/images/risotto-seafood.jpg",
+    image: "/menu/IMG_9053.jpg",
     utensils: "fork",
   },
 
@@ -970,7 +970,7 @@ export const products: Product[] = [
     category: "hot-dishes",
     price: 450,
     weight: 300,
-    image: "/images/breaded-squid.jpg",
+    image: "/menu/IMG_9830.jpg",
     utensils: "fork",
   },
   {
@@ -990,7 +990,7 @@ export const products: Product[] = [
     category: "hot-dishes",
     price: 450,
     weight: 320,
-    image: "/images/chicken-teriyaki.jpg",
+    image: "/menu/IMG_9831.jpg",
     utensils: "fork",
   },
 ];

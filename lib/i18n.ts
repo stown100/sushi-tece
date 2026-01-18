@@ -98,7 +98,7 @@ export const translations = {
       vacancies: "Вакансии",
       contacts: "Контакты",
       social: "Социальные сети",
-      copyright: "© 2024 SUSHI YM. Все права защищены.",
+      copyright: `© ${new Date().getFullYear()} SUSHI YM. Все права защищены.`,
     },
     utensils: {
       chopsticks: "Палочки",
@@ -201,6 +201,8 @@ export const translations = {
       allergens: "Алергени в наших стравах",
       vacancies: "Вакансії",
       contacts: "Контакти",
+      social: "Соціальні мережі",
+      copyright: `© ${new Date().getFullYear()} SUSHI YM. Всі права захищені.`,
     },
     utensils: {
       chopsticks: "Палички",
@@ -304,7 +306,7 @@ export const translations = {
       vacancies: "İş ilanları",
       contacts: "İletişim",
       social: "Sosyal ağlar",
-      copyright: "© 2024 SUSHI YM. Tüm hakları saklıdır.",
+      copyright: `© ${new Date().getFullYear()} SUSHI YM. Tüm hakları saklıdır.`,
     },
     utensils: {
       chopsticks: "Çubuk",
@@ -406,7 +408,7 @@ export const translations = {
       vacancies: "Vacancies",
       contacts: "Contacts",
       social: "Social networks",
-      copyright: "© 2024 SUSHI YM. All rights reserved.",
+      copyright: `© ${new Date().getFullYear()} SUSHI YM. All rights reserved.`,
     },
     utensils: {
       chopsticks: "Chopsticks",
