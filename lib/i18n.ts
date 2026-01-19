@@ -31,6 +31,7 @@ export const translations = {
       mochi: "Моти",
       "pasta-risotto": "Паста и ризотто",
       "hot-dishes": "Горячие блюда",
+      pizza: "Пицца",
     },
     subcategories: {
       all: "Все",
@@ -137,6 +138,7 @@ export const translations = {
       mochi: "Моті",
       "pasta-risotto": "Паста і ризотто",
       "hot-dishes": "Гарячі страви",
+      pizza: "Піца",
     },
     subcategories: {
       all: "Всі",
@@ -243,6 +245,7 @@ export const translations = {
       mochi: "Mochi",
       "pasta-risotto": "Makarna ve Risotto",
       "hot-dishes": "Sıcak Yemekler",
+      pizza: "Pizza",
     },
     subcategories: {
       all: "Tümü",
@@ -347,6 +350,7 @@ export const translations = {
       mochi: "Mochi",
       "pasta-risotto": "Pasta and Risotto",
       "hot-dishes": "Hot Dishes",
+      pizza: "Pizza",
     },
     subcategories: {
       all: "All",

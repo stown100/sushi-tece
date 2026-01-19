@@ -9,6 +9,7 @@ export type Category =
   | "mochi"
   | "pasta-risotto"
   | "hot-dishes"
+  | "pizza"
   | "utensils";
 
 export type RollSubcategory =

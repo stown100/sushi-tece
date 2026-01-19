@@ -24,6 +24,7 @@ export function useMainCategories() {
         value: "hot-dishes" as const,
         label: t("categories.hot-dishes"),
       },
+      { value: "pizza" as const, label: t("categories.pizza") },
     ],
     [t]
   );
