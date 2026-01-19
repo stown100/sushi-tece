@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   keywords: "суши, роллы, доставка, еда, японская кухня",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/sushiymlogo.png", type: "image/png", sizes: "any" },
     ],
-    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/sushiymlogo.png", type: "image/png" }],
   },
   openGraph: {
     title: "SUSHI YM - Доставка суши и роллов",

@@ -67,6 +67,8 @@ export const translations = {
       weight: "г",
       price: "₺",
       notFound: "Товары не найдены",
+      inCart: "В корзине",
+      pieces: "шт.",
     },
     emptyState: {
       title: "Ничего не найдено",
@@ -171,6 +173,8 @@ export const translations = {
       weight: "г",
       price: "₺",
       notFound: "Товари не знайдені",
+      inCart: "В кошику",
+      pieces: "шт.",
     },
     emptyState: {
       title: "Нічого не знайдено",
@@ -275,6 +279,8 @@ export const translations = {
       weight: "g",
       price: "₺",
       notFound: "Ürün bulunamadı",
+      inCart: "Sepette",
+      pieces: "adet",
     },
     emptyState: {
       title: "Hiçbir şey bulunamadı",
@@ -377,6 +383,8 @@ export const translations = {
       weight: "g",
       price: "₺",
       notFound: "Products not found",
+      inCart: "In cart",
+      pieces: "pcs.",
     },
     emptyState: {
       title: "Nothing found",

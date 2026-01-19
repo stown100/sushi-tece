@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/contexts/CartContext";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import TelegramIcon from "@/shared/ui/TelegramIcon";
@@ -28,9 +29,15 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary-600">
-              🍣 SUSHI YM
+          <Link href="/" className="flex items-center">
+            <div className="relative h-12 w-12 rounded-full overflow-hidden">
+              <Image
+                src="/sushiymlogo-circle.png"
+                alt="SUSHI YM"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </Link>
 
