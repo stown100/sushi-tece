@@ -44,7 +44,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <>
       <div
-        className="card group cursor-pointer"
+        className="card group cursor-pointer flex flex-col"
         onClick={() => setIsModalOpen(true)}
       >
         {/* Image */}
@@ -70,7 +70,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-3">
+        <div className="p-3 flex flex-col flex-1">
           <h3 className="font-bold text-base mb-1 line-clamp-1">
             {productName}
           </h3>
@@ -78,16 +78,18 @@ export default function ProductCard({ product }: ProductCardProps) {
             {productDescription}
           </p>
 
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-gray-500 text-xs">
-              {product.weight} {t("product.weight")}
-            </span>
-            <span className="font-bold text-base text-primary-600">
+          <div className="flex items-center mb-2">
+            {product.weight > 0 && (
+              <span className="text-gray-500 text-xs">
+                {product.weight} {t("product.weight")}
+              </span>
+            )}
+            <span className="font-bold text-base text-primary-600 ml-auto">
               {product.price} {t("product.price")}
             </span>
           </div>
 
-          <div onClick={(e) => e.stopPropagation()}>
+          <div className="mt-auto" onClick={(e) => e.stopPropagation()}>
             <ProductButton product={product} />
           </div>
         </div>

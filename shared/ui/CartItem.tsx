@@ -29,7 +29,8 @@ export default function CartItem({ item }: CartItemProps) {
           <h3 className="font-semibold">{productName}</h3>
           <p className="text-sm text-gray-600">{productDescription}</p>
           <p className="text-sm text-gray-500 mt-1">
-            {item.weight}г • {item.price} {t("product.price")}
+            {item.weight > 0 && `${item.weight}г • `}
+            {item.price} {t("product.price")}
           </p>
 
           {/* Quantity Controls */}

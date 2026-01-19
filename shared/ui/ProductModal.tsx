@@ -125,15 +125,15 @@ export default function ProductModal({
                     </p>
 
                     {/* Weight and Price */}
-                    <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-200">
-                        <div className="flex items-center gap-4">
-
-                            <span className="font-semibold text-gray-900">
-                                {product.weight} {t("product.weight")}
-                            </span>
-
-                        </div>
-                        <div className="text-right">
+                    <div className="flex items-center mb-6 pb-6 border-b border-gray-200">
+                        {product.weight > 0 && (
+                            <div className="flex items-center gap-4">
+                                <span className="font-semibold text-gray-900">
+                                    {product.weight} {t("product.weight")}
+                                </span>
+                            </div>
+                        )}
+                        <div className="text-right ml-auto">
                             <span className="text-2xl md:text-3xl font-bold text-primary-600">
                                 {product.price} {t("product.price")}
                             </span>
