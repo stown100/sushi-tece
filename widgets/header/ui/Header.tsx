@@ -83,7 +83,7 @@ export default function Header() {
             {/* Social Links */}
             <div className="hidden md:flex items-center space-x-2">
               <a
-                href="https://t.me/sushitece_bot"
+                href="https://t.me/SushiYmBot"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"

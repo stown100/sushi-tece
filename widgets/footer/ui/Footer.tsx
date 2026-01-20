@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import TelegramIcon from "@/shared/ui/TelegramIcon";
 import InstagramIcon from "@/shared/ui/InstagramIcon";
+import Image from "next/image";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -15,7 +15,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-2">🍣 SUSHI YM</h3>
+            <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
+              <Image
+                src="/sushiymlogo.png"
+                alt="SUSHI YM"
+                width={45}
+                height={45}
+              />
+              SUSHI YM
+            </h3>
             <p className="text-gray-400 text-xs">{t("hero.description")}</p>
           </div>
 
@@ -43,7 +51,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-2 text-sm">{t("footer.social")}</h4>
             <div className="flex space-x-2">
               <a
-                href="https://t.me/sushitece_bot"
+                href="https://t.me/SushiYmBot"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"
