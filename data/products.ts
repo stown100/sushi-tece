@@ -887,7 +887,7 @@ export const products: Product[] = [
     category: "pasta-risotto",
     price: 450,
     weight: 450,
-    image: "/menu/IMG_9817.jpg",
+    image: "/menu/IMG_9817.JPG",
     utensils: "fork",
   },
   {
