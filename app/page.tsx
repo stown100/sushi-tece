@@ -66,7 +66,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[300px] md:h-[300px]">
+      <section className="relative w-full h-[110px] xs:h-[110px] sm:h-[220px] md:h-[260px] lg:h-[320px] xl:h-[320px] 2xl:h-[320px]">
         <Image
           src="/menu/preview.jpg"
           alt="SUSHI YM - Mersin Tece'de En İyi Sushi ve Roll Restoranı"

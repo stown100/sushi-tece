@@ -18,9 +18,9 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
               <Image
                 src="/sushiymlogo.png"
-                alt="SUSHI YM"
-                width={45}
-                height={45}
+                alt="SUSHI YM - Mersin Tece Sushi Restoranı Logo"
+                width={48}
+                height={48}
               />
               SUSHI YM
             </h3>

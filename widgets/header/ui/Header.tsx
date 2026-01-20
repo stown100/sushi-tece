@@ -34,9 +34,10 @@ export default function Header() {
               <Image
                 src="/sushiymlogo.png"
                 alt="SUSHI YM - Mersin Tece Sushi Restoranı Logo"
-                fill
                 className="object-cover"
                 priority
+                width={48}
+                height={48}
               />
             </div>
           </Link>
