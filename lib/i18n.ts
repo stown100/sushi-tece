@@ -84,7 +84,9 @@ export const translations = {
         name: "Имя",
         phone: "Телефон",
         submit: "Заказать",
+        submitting: "Отправка...",
         cancel: "Отмена",
+        error: "Произошла ошибка при отправке заказа",
       },
       confirmation: {
         title: "Заказ принят!",
@@ -191,7 +193,9 @@ export const translations = {
         name: "Ім'я",
         phone: "Телефон",
         submit: "Замовити",
+        submitting: "Відправка...",
         cancel: "Скасувати",
+        error: "Сталася помилка при відправці замовлення",
       },
       confirmation: {
         title: "Замовлення прийнято!",
@@ -298,7 +302,9 @@ export const translations = {
         name: "Ad",
         phone: "Telefon",
         submit: "Sipariş ver",
+        submitting: "Gönderiliyor...",
         cancel: "İptal",
+        error: "Sipariş gönderilirken bir hata oluştu",
       },
       confirmation: {
         title: "Sipariş alındı!",
@@ -403,7 +409,9 @@ export const translations = {
         name: "Name",
         phone: "Phone",
         submit: "Order",
+        submitting: "Submitting...",
         cancel: "Cancel",
+        error: "An error occurred while submitting the order",
       },
       confirmation: {
         title: "Order placed!",

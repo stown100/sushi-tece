@@ -93,6 +93,8 @@ export default function Cart() {
         <OrderModal
           onClose={() => setShowOrderModal(false)}
           onSubmit={handleOrderSubmit}
+          items={items}
+          totalPrice={totalPrice}
         />
       )}
       {showConfirmationModal && (
