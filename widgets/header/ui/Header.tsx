@@ -32,7 +32,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <div className="relative h-12 w-12 rounded-full overflow-hidden">
               <Image
-                src="/sushiymlogo-circle.png"
+                src="/sushiymlogo.png"
                 alt="SUSHI YM"
                 fill
                 className="object-cover"
