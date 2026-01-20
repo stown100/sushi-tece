@@ -19,7 +19,7 @@ export const products: Product[] = [
     category: "sets",
     price: 3000,
     weight: 1790,
-    image: "/menu/IMG_9828.jpg",
+    image: "/menu/IMG_9828.JPG",
     utensils: "chopsticks",
   },
   {
@@ -39,7 +39,7 @@ export const products: Product[] = [
     category: "sets",
     price: 2500,
     weight: 1700,
-    image: "/menu/IMG_9824.jpg",
+    image: "/menu/IMG_9824.JPG",
     utensils: "chopsticks",
   },
   {
@@ -59,7 +59,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1200,
     weight: 970,
-    image: "/menu/IMG_9823.jpg",
+    image: "/menu/IMG_9823.JPG",
     badge: "new",
     utensils: "chopsticks",
   },
@@ -80,7 +80,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1500,
     weight: 1040,
-    image: "/menu/IMG_9827.jpg",
+    image: "/menu/IMG_9827.JPG",
     utensils: "chopsticks",
   },
   {
@@ -100,7 +100,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1600,
     weight: 1300,
-    image: "/menu/IMG_9826.jpg",
+    image: "/menu/IMG_9826.JPG",
     utensils: "chopsticks",
   },
   {
@@ -120,7 +120,7 @@ export const products: Product[] = [
     category: "sets",
     price: 1200,
     weight: 1100,
-    image: "/menu/IMG_9825.jpg",
+    image: "/menu/IMG_9825.JPG",
     badge: "hit",
     utensils: "chopsticks",
   },
@@ -161,7 +161,7 @@ export const products: Product[] = [
     category: "sets",
     price: 3500,
     weight: 1850,
-    image: "/menu/IMG_9822.jpg",
+    image: "/menu/IMG_9822.JPG",
     badge: "hit",
     utensils: "chopsticks",
   },
@@ -185,7 +185,7 @@ export const products: Product[] = [
     subcategory: "sushi-burger",
     price: 320,
     weight: 320,
-    image: "/menu/IMG_9820.jpg",
+    image: "/menu/IMG_9820.JPG",
     utensils: "chopsticks",
   },
   {
@@ -206,7 +206,7 @@ export const products: Product[] = [
     subcategory: "sushi-burger",
     price: 320,
     weight: 320,
-    image: "/menu/IMG_9819.jpg",
+    image: "/menu/IMG_9819.JPG",
     utensils: "chopsticks",
   },
 
@@ -229,7 +229,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/menu/IMG_0053.JPG",
+    image: "/menu/IMG_0053.jpg",
     utensils: "chopsticks",
   },
   {
@@ -250,7 +250,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 380,
-    image: "/menu/IMG_0054.JPG",
+    image: "/menu/IMG_0054.jpg",
     badge: "hit",
     utensils: "chopsticks",
   },
@@ -272,7 +272,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 240,
-    image: "/menu/IMG_0056.JPG",
+    image: "/menu/IMG_0056.jpg",
     utensils: "chopsticks",
   },
   {
@@ -293,7 +293,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 250,
-    image: "/menu/IMG_9832.JPG",
+    image: "/menu/IMG_9832.jpg",
     utensils: "chopsticks",
   },
   {
@@ -314,7 +314,7 @@ export const products: Product[] = [
     subcategory: "philadelphia",
     price: 360,
     weight: 225,
-    image: "/menu/IMG_9833.JPG",
+    image: "/menu/IMG_9833.jpg",
     utensils: "chopsticks",
   },
 
@@ -337,7 +337,7 @@ export const products: Product[] = [
     subcategory: "california",
     price: 320,
     weight: 240,
-    image: "/menu/IMG_9834.JPG",
+    image: "/menu/IMG_9834.jpg",
     utensils: "chopsticks",
   },
   {
@@ -358,7 +358,7 @@ export const products: Product[] = [
     subcategory: "california",
     price: 320,
     weight: 220,
-    image: "/menu/IMG_9835.JPG",
+    image: "/menu/IMG_9835.jpg",
     utensils: "chopsticks",
   },
 
@@ -381,7 +381,7 @@ export const products: Product[] = [
     subcategory: "maki",
     price: 250,
     weight: 110,
-    image: "/menu/IMG_9861.JPG",
+    image: "/menu/IMG_9861.jpg",
     utensils: "chopsticks",
   },
   {
@@ -402,7 +402,7 @@ export const products: Product[] = [
     subcategory: "maki",
     price: 250,
     weight: 110,
-    image: "/menu/IMG_9862.JPG",
+    image: "/menu/IMG_9862.jpg",
     utensils: "chopsticks",
   },
 
@@ -425,7 +425,7 @@ export const products: Product[] = [
     subcategory: "futo-maki",
     price: 250,
     weight: 285,
-    image: "/menu/IMG_9848.JPG",
+    image: "/menu/IMG_9848.jpg",
     utensils: "chopsticks",
   },
   {
@@ -446,7 +446,7 @@ export const products: Product[] = [
     subcategory: "futo-maki",
     price: 250,
     weight: 285,
-    image: "/menu/IMG_0058.JPG",
+    image: "/menu/IMG_0058.jpg",
     utensils: "chopsticks",
   },
 
