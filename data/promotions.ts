@@ -48,6 +48,6 @@ export const promotions: Promotion[] = [
       en: "Quick order placement through our Telegram bot",
     },
     image: "/menu/IMG_0078.jpg",
-    link: "https://t.me/sushitece_bot",
+    link: "https://t.me/SushiYmBot",
   },
 ];

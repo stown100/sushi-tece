@@ -29,11 +29,11 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" aria-label="SUSHI YM Ana Sayfa">
             <div className="relative h-12 w-12 rounded-full overflow-hidden">
               <Image
                 src="/sushiymlogo.png"
-                alt="SUSHI YM"
+                alt="SUSHI YM - Mersin Tece Sushi Restoranı Logo"
                 fill
                 className="object-cover"
                 priority

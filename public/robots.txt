@@ -1,0 +1,19 @@
+# robots.txt для SUSHI YM
+# Mersin Tece Sushi Restoranı
+
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных файлов
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Разрешаем индексацию изображений меню
+Allow: /menu/
+
+# Sitemap
+Sitemap: https://sushi-ym.com/sitemap.xml
+
+# Предпочтительный хост
+Host: sushi-ym.com
