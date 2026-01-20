@@ -5,6 +5,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import Header from "@/widgets/header/ui/Header";
 import Footer from "@/widgets/footer/ui/Footer";
 import Cart from "@/widgets/cart/ui/Cart";
+import MultilingualOGTags from "@/components/MultilingualOGTags";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    alternateLocale: ["tr_TR", "ru_RU", "uk_UA", "en_US"],
+    alternateLocale: ["ru_RU", "uk_UA", "en_US"],
     url: "/",
     siteName: "SUSHI YM",
     title: "SUSHI YM - Mersin Tece Sushi Restoranı | Sushi ve Roll Sipariş",
@@ -117,6 +118,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={inter.className}>
+        <MultilingualOGTags />
         <LanguageProvider>
           <CartProvider>
             <Header />
