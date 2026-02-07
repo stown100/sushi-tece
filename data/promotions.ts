@@ -1,22 +1,22 @@
 import { Promotion } from "@/types";
 
 export const promotions: Promotion[] = [
-  {
-    id: "promo-1",
-    title: {
-      ru: "Скидка 200 ₺ за самовывоз",
-      uk: "Знижка 200 ₺ за самовивіз",
-      tr: "Kendin al için 200 ₺ indirim",
-      en: "200 ₺ discount for pickup",
-    },
-    description: {
-      ru: "Заберите заказ самостоятельно и получите скидку 200 ₺",
-      uk: "Заберіть замовлення самостійно та отримайте знижку 200 ₺",
-      tr: "Siparişinizi kendiniz alın ve 200 ₺ indirim kazanın",
-      en: "Pick up your order yourself and get a 200 ₺ discount",
-    },
-    image: "/menu/delivery-banner.jpg",
-  },
+  // {
+  //   id: "promo-1",
+  //   title: {
+  //     ru: "Скидка 200 ₺ за самовывоз",
+  //     uk: "Знижка 200 ₺ за самовивіз",
+  //     tr: "Kendin al için 200 ₺ indirim",
+  //     en: "200 ₺ discount for pickup",
+  //   },
+  //   description: {
+  //     ru: "Заберите заказ самостоятельно и получите скидку 200 ₺",
+  //     uk: "Заберіть замовлення самостійно та отримайте знижку 200 ₺",
+  //     tr: "Siparişinizi kendiniz alın ve 200 ₺ indirim kazanın",
+  //     en: "Pick up your order yourself and get a 200 ₺ discount",
+  //   },
+  //   image: "/menu/delivery-banner.jpg",
+  // },
   {
     id: "promo-2",
     title: {
