@@ -2,11 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import { promotions } from "@/data/promotions";
+import { useProducts } from "@/contexts/ProductsContext";
 import Promotions from "@/components/Promotions";
 import MenuSection from "@/widgets/menu/ui/MenuSection";
 
 export default function Home() {
+  const { promotions } = useProducts();
+
   // Структурированные данные для ресторана (JSON-LD)
   const restaurantSchema = {
     "@context": "https://schema.org",

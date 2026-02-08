@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { products } from "@/data/products";
+import { useProducts } from "@/contexts/ProductsContext";
 import { Category, RollSubcategory, SushiSubcategory } from "@/types";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import {
@@ -17,6 +17,7 @@ import SubcategoryFilter from "@/features/product-filter/ui/SubcategoryFilter";
 
 export default function MenuSection() {
   const { t } = useTranslation();
+  const { products } = useProducts();
 
   const [selectedCategory, setSelectedCategory] = useState<Category | "all">(
     "all"
