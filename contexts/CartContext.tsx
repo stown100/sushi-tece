@@ -8,8 +8,7 @@ import React, {
   useCallback,
 } from "react";
 import { Product, CartItem } from "@/types";
-import { products } from "@/data/products";
-import { utensilsProducts } from "@/data/utensils";
+import { useProducts } from "@/contexts/ProductsContext";
 
 interface CartContextType {
   items: CartItem[];
@@ -28,6 +27,7 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
+  const { products } = useProducts();
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -73,9 +73,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           product.utensils === "chopsticks"
             ? "utensils-chopsticks"
             : "utensils-fork";
-        const utensilsProduct = utensilsProducts.find(
-          (p) => p.id === utensilsId
-        );
+        const utensilsProduct = products.find((p) => p.id === utensilsId);
 
         if (utensilsProduct) {
           const existingUtensils = prevItems.find(
@@ -90,7 +88,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
       return updatedItems;
     });
-  }, []);
+  }, [products]);
 
   const removeFromCart = useCallback((productId: string) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== productId));
@@ -132,7 +130,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         addToCart(product);
       }
     },
-    [addToCart]
+    [addToCart, products]
   );
 
   const openCart = useCallback(() => setIsOpen(true), []);

@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CartProvider } from "@/contexts/CartContext";
+import { ProductsProvider } from "@/contexts/ProductsContext";
 import Header from "@/widgets/header/ui/Header";
 import Footer from "@/widgets/footer/ui/Footer";
 import Cart from "@/widgets/cart/ui/Cart";
 import MultilingualOGTags from "@/components/MultilingualOGTags";
+import { fetchProducts, fetchPromotions } from "@/lib/sanity/fetch";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
@@ -110,22 +112,29 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [products, promotions] = await Promise.all([
+    fetchProducts(),
+    fetchPromotions(),
+  ]);
+
   return (
     <html lang="tr">
       <body className={inter.className}>
         <MultilingualOGTags />
         <LanguageProvider>
-          <CartProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-            <Cart />
-          </CartProvider>
+          <ProductsProvider products={products} promotions={promotions}>
+            <CartProvider>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+              <Cart />
+            </CartProvider>
+          </ProductsProvider>
         </LanguageProvider>
       </body>
     </html>

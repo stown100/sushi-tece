@@ -2,9 +2,9 @@
 
 import React from "react";
 import { useCart } from "@/contexts/CartContext";
+import { useProducts } from "@/contexts/ProductsContext";
 import { getLocalizedText } from "@/lib/utils";
 import { useTranslation } from "@/shared/hooks/useTranslation";
-import { products } from "@/data/products";
 import { CartItem as CartItemType } from "@/types";
 
 interface CartItemProps {
@@ -13,14 +13,16 @@ interface CartItemProps {
 
 export default function CartItem({ item }: CartItemProps) {
   const { updateQuantity, removeFromCart, addRecommendation } = useCart();
+  const { products } = useProducts();
   const { t, language } = useTranslation();
 
   const productName = getLocalizedText(item.name, language);
   const productDescription = getLocalizedText(item.description, language);
 
-  // Находим рекомендации
   const recommendations =
-    item.recommendations?.map((id) => products.find((p) => p.id === id)) || [];
+    item.recommendations
+      ?.map((id) => products.find((p) => p.id === id))
+      .filter(Boolean) ?? [];
 
   return (
     <div className="border-b pb-4">
