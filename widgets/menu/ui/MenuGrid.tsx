@@ -2,7 +2,13 @@
 
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Product, Category, RollSubcategory, SushiSubcategory } from "@/types";
+import {
+  Product,
+  Category,
+  RollSubcategory,
+  SushiSubcategory,
+  DrinkSubcategory,
+} from "@/types";
 import { useProductFilter } from "@/shared/hooks/useProductFilter";
 import ProductCard from "@/shared/ui/ProductCard";
 import EmptyState from "@/shared/ui/EmptyState";
@@ -10,7 +16,12 @@ import EmptyState from "@/shared/ui/EmptyState";
 interface MenuGridProps {
   products: Product[];
   selectedCategory: Category | "all";
-  selectedSubcategory?: RollSubcategory | SushiSubcategory | "all" | undefined;
+  selectedSubcategory?:
+    | RollSubcategory
+    | SushiSubcategory
+    | DrinkSubcategory
+    | "all"
+    | undefined;
   searchQuery: string;
 }
 

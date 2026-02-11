@@ -15,6 +15,17 @@ export type RollSubcategory =
 
 export type SushiSubcategory = "nigiri" | "sushi-burger";
 
+export type DrinkSubcategory =
+  | "coffee"
+  | "milk-shakes"
+  | "tea"
+  | "cold-drinks"
+  | "fresh-juice"
+  | "lemonade"
+  | "smoothie"
+  | "energy"
+  | "cocktails";
+
 export type BadgeType = "hit" | "new" | "spicy" | "vegetarian" | "discount";
 
 export interface Product {
@@ -32,7 +43,7 @@ export interface Product {
     en: string;
   };
   category: Category;
-  subcategory?: RollSubcategory | SushiSubcategory;
+  subcategory?: RollSubcategory | SushiSubcategory | DrinkSubcategory;
   price: number;
   weight: number; // в граммах
   image: string;

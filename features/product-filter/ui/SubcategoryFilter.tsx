@@ -1,17 +1,18 @@
 "use client";
 
 import React from "react";
-import { RollSubcategory, SushiSubcategory } from "@/types";
+import {
+  RollSubcategory,
+  SushiSubcategory,
+  DrinkSubcategory,
+} from "@/types";
+
+type Subcategory = RollSubcategory | SushiSubcategory | DrinkSubcategory | "all";
 
 interface SubcategoryFilterProps {
-  subcategories: Array<{
-    value: RollSubcategory | SushiSubcategory | "all";
-    label: string;
-  }>;
-  selectedSubcategory?: RollSubcategory | SushiSubcategory | "all" | undefined;
-  onSubcategoryChange: (
-    subcategory: RollSubcategory | SushiSubcategory | "all"
-  ) => void;
+  subcategories: Array<{ value: Subcategory; label: string }>;
+  selectedSubcategory?: Subcategory | undefined;
+  onSubcategoryChange: (subcategory: Subcategory) => void;
 }
 
 export default function SubcategoryFilter({

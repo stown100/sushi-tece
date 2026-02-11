@@ -1,13 +1,25 @@
 import { defineField, defineType } from "sanity";
 
 const subcategoryOptions = [
+  // Rolls
   "philadelphia",
   "california",
   "maki",
   "futo-maki",
   "baked-rolls",
+  // Sushi
   "nigiri",
   "sushi-burger",
+  // Drinks
+  "coffee",
+  "milk-shakes",
+  "tea",
+  "cold-drinks",
+  "fresh-juice",
+  "lemonade",
+  "smoothie",
+  "energy",
+  "cocktails",
 ];
 
 const badgeOptions = ["hit", "new", "spicy", "vegetarian", "discount"];
