@@ -74,7 +74,7 @@ export default function MenuSection() {
         />
 
         <MenuGrid
-          products={products}
+          products={products.filter((p) => p.category !== "utensils")}
           selectedCategory={selectedCategory}
           selectedSubcategory={selectedSubcategory}
           searchQuery={searchQuery}

@@ -1,20 +1,5 @@
 import { defineField, defineType } from "sanity";
 
-const categoryOptions = [
-  "sets",
-  "rolls",
-  "sushi",
-  "tempura",
-  "ramen",
-  "wok",
-  "burgers",
-  "mochi",
-  "pasta-risotto",
-  "hot-dishes",
-  "pizza",
-  "utensils",
-];
-
 const subcategoryOptions = [
   "philadelphia",
   "california",
@@ -26,8 +11,6 @@ const subcategoryOptions = [
 ];
 
 const badgeOptions = ["hit", "new", "spicy", "vegetarian", "discount"];
-
-const utensilsOptions = ["chopsticks", "fork", "none"];
 
 export default defineType({
   name: "product",
@@ -67,10 +50,8 @@ export default defineType({
     defineField({
       name: "category",
       title: "Category",
-      type: "string",
-      options: {
-        list: categoryOptions.map((c) => ({ title: c, value: c })),
-      },
+      type: "reference",
+      to: [{ type: "category" }],
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -105,14 +86,6 @@ export default defineType({
       type: "string",
       options: {
         list: badgeOptions.map((b) => ({ title: b, value: b })),
-      },
-    }),
-    defineField({
-      name: "utensils",
-      title: "Utensils",
-      type: "string",
-      options: {
-        list: utensilsOptions.map((u) => ({ title: u, value: u })),
       },
     }),
     defineField({

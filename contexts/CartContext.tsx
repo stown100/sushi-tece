@@ -8,6 +8,7 @@ import React, {
   useCallback,
 } from "react";
 import { Product, CartItem } from "@/types";
+import { utensilsProducts } from "@/lib/utensils";
 import { useProducts } from "@/contexts/ProductsContext";
 
 interface CartContextType {
@@ -67,20 +68,28 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       const newItem: CartItem = { ...product, quantity: 1 };
       const updatedItems = [...prevItems, newItem];
 
-      // Автоматически добавляем приборы если нужно
-      if (product.utensils && product.utensils !== "none") {
+      // Вилка: WOK, Рамен, Паста и ризотто, Горячие блюда
+      // Палочки: Сеты, Роллы, Суши, Темпура
+      const forkCategories = ["wok", "ramen", "pasta-risotto", "hot-dishes"];
+      const chopsticksCategories = ["sets", "rolls", "sushi", "tempura"];
+      const utensilsType = forkCategories.includes(product.category)
+        ? "fork"
+        : chopsticksCategories.includes(product.category)
+          ? "chopsticks"
+          : null;
+
+      if (utensilsType) {
         const utensilsId =
-          product.utensils === "chopsticks"
+          utensilsType === "chopsticks"
             ? "utensils-chopsticks"
             : "utensils-fork";
-        const utensilsProduct = products.find((p) => p.id === utensilsId);
+        const utensilsProduct = utensilsProducts.find((p) => p.id === utensilsId);
 
         if (utensilsProduct) {
           const existingUtensils = prevItems.find(
             (item) => item.id === utensilsId
           );
           if (!existingUtensils) {
-            // Добавляем приборы только один раз, если их еще нет в корзине
             return [...updatedItems, { ...utensilsProduct, quantity: 1 }];
           }
         }

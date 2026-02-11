@@ -1,32 +1,24 @@
 import { useMemo } from "react";
+import { useProducts } from "@/contexts/ProductsContext";
+import { getLocalizedText } from "@/lib/utils";
 import { useTranslation } from "./useTranslation";
-import { Category, RollSubcategory, SushiSubcategory } from "@/types";
+import type { Category, RollSubcategory, SushiSubcategory } from "@/types";
 
 export function useMainCategories() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const { categories } = useProducts();
 
   return useMemo(
     () => [
       { value: "all" as const, label: t("categories.all") },
-      { value: "sets" as const, label: t("categories.sets") },
-      { value: "rolls" as const, label: t("categories.rolls") },
-      { value: "sushi" as const, label: t("categories.sushi") },
-      { value: "tempura" as const, label: t("categories.tempura") },
-      { value: "ramen" as const, label: t("categories.ramen") },
-      { value: "wok" as const, label: t("categories.wok") },
-      { value: "burgers" as const, label: t("categories.burgers") },
-      { value: "mochi" as const, label: t("categories.mochi") },
-      {
-        value: "pasta-risotto" as const,
-        label: t("categories.pasta-risotto"),
-      },
-      {
-        value: "hot-dishes" as const,
-        label: t("categories.hot-dishes"),
-      },
-      { value: "pizza" as const, label: t("categories.pizza") },
+      ...categories
+        .filter((c) => c.slug !== "utensils")
+        .map((c) => ({
+          value: c.slug as Category,
+          label: getLocalizedText(c.name, language),
+        })),
     ],
-    [t]
+    [categories, t, language]
   );
 }
 
