@@ -1,11 +1,12 @@
 "use client";
 
 import React, { createContext, useContext } from "react";
-import type { Product, Promotion } from "@/types";
+import type { CategoryItem, Product, Promotion } from "@/types";
 
 interface ProductsContextType {
   products: Product[];
   promotions: Promotion[];
+  categories: CategoryItem[];
 }
 
 const ProductsContext = createContext<ProductsContextType | undefined>(
@@ -16,13 +17,17 @@ export function ProductsProvider({
   children,
   products,
   promotions,
+  categories,
 }: {
   children: React.ReactNode;
   products: Product[];
   promotions: Promotion[];
+  categories: CategoryItem[];
 }) {
   return (
-    <ProductsContext.Provider value={{ products, promotions }}>
+    <ProductsContext.Provider
+      value={{ products, promotions, categories }}
+    >
       {children}
     </ProductsContext.Provider>
   );

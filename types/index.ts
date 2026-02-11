@@ -1,16 +1,10 @@
-export type Category =
-  | "sets"
-  | "rolls"
-  | "sushi"
-  | "tempura"
-  | "ramen"
-  | "wok"
-  | "burgers"
-  | "mochi"
-  | "pasta-risotto"
-  | "hot-dishes"
-  | "pizza"
-  | "utensils";
+export type Category = string; // slug из Sanity, напр. "sets", "rolls". "utensils" — служебный, не в меню
+
+export interface CategoryItem {
+  slug: string;
+  name: { ru: string; uk: string; tr: string; en: string };
+  order?: number;
+}
 
 export type RollSubcategory =
   | "philadelphia"

@@ -7,7 +7,11 @@ import Header from "@/widgets/header/ui/Header";
 import Footer from "@/widgets/footer/ui/Footer";
 import Cart from "@/widgets/cart/ui/Cart";
 import MultilingualOGTags from "@/components/MultilingualOGTags";
-import { fetchProducts, fetchPromotions } from "@/lib/sanity/fetch";
+import {
+  fetchCategories,
+  fetchProducts,
+  fetchPromotions,
+} from "@/lib/sanity/fetch";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
@@ -117,9 +121,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [products, promotions] = await Promise.all([
+  const [products, promotions, categories] = await Promise.all([
     fetchProducts(),
     fetchPromotions(),
+    fetchCategories(),
   ]);
 
   return (
@@ -127,7 +132,11 @@ export default async function RootLayout({
       <body className={inter.className}>
         <MultilingualOGTags />
         <LanguageProvider>
-          <ProductsProvider products={products} promotions={promotions}>
+          <ProductsProvider
+            products={products}
+            promotions={promotions}
+            categories={categories}
+          >
             <CartProvider>
               <Header />
               <main>{children}</main>

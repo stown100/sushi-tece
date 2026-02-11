@@ -1,7 +1,11 @@
 import { createImageUrlBuilder } from "@sanity/image-url";
 import { client } from "@/lib/sanity";
-import { PRODUCTS_QUERY, PROMOTIONS_QUERY } from "./queries";
-import type { Product, Promotion } from "@/types";
+import {
+  CATEGORIES_QUERY,
+  PRODUCTS_QUERY,
+  PROMOTIONS_QUERY,
+} from "./queries";
+import type { CategoryItem, Product, Promotion } from "@/types";
 
 const imageBuilder = createImageUrlBuilder(client);
 
@@ -35,18 +39,39 @@ function toImageUrl(
   }
 }
 
+export async function fetchCategories(): Promise<CategoryItem[]> {
+  try {
+    const raw = await client.fetch<
+      Array<{
+        _id: string;
+        slug: string;
+        name?: { ru?: string; uk?: string; tr?: string; en?: string } | null;
+        order?: number;
+      }>
+    >(CATEGORIES_QUERY);
+    if (!raw?.length) return [];
+
+    return raw.map((item) => ({
+      slug: item.slug,
+      name: buildLocalized(item.name),
+      order: item.order ?? 0,
+    }));
+  } catch {
+    return [];
+  }
+}
+
 interface SanityProduct {
   _id: string;
   slug: { current?: string } | string;
   name?: { ru?: string; uk?: string; tr?: string; en?: string } | null;
   description?: { ru?: string; uk?: string; tr?: string; en?: string } | null;
-  category: string;
+  category?: string;
   subcategory?: string;
   price: number;
   weight: number;
   image?: { _ref?: string; asset?: { _ref?: string } } | null;
   badge?: string;
-  utensils?: string;
   recommendations?: string[];
 }
 
@@ -59,13 +84,12 @@ export async function fetchProducts(): Promise<Product[]> {
       id: getSlug(item.slug, item._id),
       name: buildLocalized(item.name),
       description: buildLocalized(item.description),
-      category: item.category as Product["category"],
+      category: (item.category ?? "") as Product["category"],
       subcategory: item.subcategory as Product["subcategory"],
       price: item.price ?? 0,
       weight: item.weight ?? 0,
       image: toImageUrl(item.image),
       badge: item.badge as Product["badge"],
-      utensils: item.utensils as Product["utensils"],
       recommendations: item.recommendations?.filter(Boolean),
     }));
   } catch {
