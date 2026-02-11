@@ -1,12 +1,23 @@
 import { useMemo } from "react";
-import { Product, Category, RollSubcategory, SushiSubcategory } from "@/types";
+import {
+  Product,
+  Category,
+  RollSubcategory,
+  SushiSubcategory,
+  DrinkSubcategory,
+} from "@/types";
 import { getLocalizedText } from "@/lib/utils";
 import { Language } from "@/types";
 
 interface UseProductFilterProps {
   products: Product[];
   selectedCategory: Category | "all";
-  selectedSubcategory?: RollSubcategory | SushiSubcategory | "all" | undefined;
+  selectedSubcategory?:
+    | RollSubcategory
+    | SushiSubcategory
+    | DrinkSubcategory
+    | "all"
+    | undefined;
   searchQuery: string;
   language: Language;
 }

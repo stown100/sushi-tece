@@ -2,12 +2,18 @@
 
 import React, { useState } from "react";
 import { useProducts } from "@/contexts/ProductsContext";
-import { Category, RollSubcategory, SushiSubcategory } from "@/types";
+import {
+  Category,
+  RollSubcategory,
+  SushiSubcategory,
+  DrinkSubcategory,
+} from "@/types";
 import { useTranslation } from "@/shared/hooks/useTranslation";
 import {
   useMainCategories,
   useRollSubcategories,
   useSushiSubcategories,
+  useDrinkSubcategories,
   useAvailableSubcategories,
 } from "@/shared/hooks/useCategories";
 import MenuGrid from "./MenuGrid";
@@ -23,33 +29,39 @@ export default function MenuSection() {
     "all"
   );
   const [selectedSubcategory, setSelectedSubcategory] = useState<
-    RollSubcategory | SushiSubcategory | "all" | undefined
+    RollSubcategory | SushiSubcategory | DrinkSubcategory | "all" | undefined
   >(undefined);
   const [searchQuery, setSearchQuery] = useState("");
 
   const mainCategories = useMainCategories();
   const rollSubcategories = useRollSubcategories();
   const sushiSubcategories = useSushiSubcategories();
+  const drinkSubcategories = useDrinkSubcategories();
   const availableSubcategories: Array<{
-    value: RollSubcategory | SushiSubcategory | "all";
+    value: RollSubcategory | SushiSubcategory | DrinkSubcategory | "all";
     label: string;
   }> | null = useAvailableSubcategories(
     selectedCategory,
     rollSubcategories,
-    sushiSubcategories
+    sushiSubcategories,
+    drinkSubcategories
   );
 
   const handleCategoryChange = (category: Category | "all") => {
     setSelectedCategory(category);
-    if (category !== "rolls" && category !== "sushi") {
-      setSelectedSubcategory(undefined);
-    } else {
+    if (
+      category === "rolls" ||
+      category === "sushi" ||
+      category === "drinks"
+    ) {
       setSelectedSubcategory("all");
+    } else {
+      setSelectedSubcategory(undefined);
     }
   };
 
   const handleSubcategoryChange = (
-    subcategory: RollSubcategory | SushiSubcategory | "all"
+    subcategory: RollSubcategory | SushiSubcategory | DrinkSubcategory | "all"
   ) => {
     setSelectedSubcategory(subcategory);
   };
