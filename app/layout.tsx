@@ -14,6 +14,9 @@ import {
 } from "@/lib/sanity/fetch";
 import "./globals.css";
 
+// Обновлять данные из Sanity (меню, акции) не реже чем раз в 60 секунд
+export const revalidate = 60;
+
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
