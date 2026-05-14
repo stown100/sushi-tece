@@ -48,7 +48,7 @@ export async function fetchCategories(): Promise<CategoryItem[]> {
         name?: { ru?: string; uk?: string; tr?: string; en?: string } | null;
         order?: number;
       }>
-    >(CATEGORIES_QUERY);
+    >(CATEGORIES_QUERY, {}, { cache: "no-store" });
     if (!raw?.length) return [];
 
     return raw.map((item) => ({
@@ -77,7 +77,11 @@ interface SanityProduct {
 
 export async function fetchProducts(): Promise<Product[]> {
   try {
-    const raw = await client.fetch<SanityProduct[]>(PRODUCTS_QUERY);
+    const raw = await client.fetch<SanityProduct[]>(
+      PRODUCTS_QUERY,
+      {},
+      { cache: "no-store" }
+    );
     if (!raw?.length) return [];
 
     return raw.map((item) => ({
@@ -108,7 +112,11 @@ interface SanityPromotion {
 
 export async function fetchPromotions(): Promise<Promotion[]> {
   try {
-    const raw = await client.fetch<SanityPromotion[]>(PROMOTIONS_QUERY);
+    const raw = await client.fetch<SanityPromotion[]>(
+      PROMOTIONS_QUERY,
+      {},
+      { cache: "no-store" }
+    );
     if (!raw?.length) return [];
 
     return raw.map((item) => ({
