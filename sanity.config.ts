@@ -1,6 +1,8 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
+import { TagIcon } from "@sanity/icons";
 import { schemaTypes } from "./sanity/schemas";
+import BulkPriceTool from "./sanity/tools/BulkPriceTool";
 
 export default defineConfig({
   name: "sushi-ym",
@@ -11,4 +13,13 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+  tools: (prev) => [
+    ...prev,
+    {
+      name: "prices",
+      title: "Цены",
+      icon: TagIcon,
+      component: BulkPriceTool,
+    },
+  ],
 });
